@@ -27,12 +27,13 @@ class Hits {
       user_id;
   String? pageUrl,
       type,
-      tags,
       previewURL,
       webformateURL,
       largeImageURL,
       user,
-      userImageURL;
+      userImageURL,
+  tags;
+
 
   Hits(
       {required this.id,
@@ -73,7 +74,7 @@ class Hits {
         previewHeight: m1['previewHeight'],
         previeWidth: m1['previewWidth'],
         previewURL: m1['previewURL'],
-        tags: m1['tags'],
+        tags:m1['tags']?? 'unknown tags' ,
         type: m1['type'],
         user: m1['user'],
         user_id: m1['user_id'],

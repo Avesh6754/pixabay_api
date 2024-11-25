@@ -20,4 +20,17 @@ class Api_Helper
       }
     return {};
   }
+  Future<Map> fectsearchdata(String search)
+  async {
+    final api="https://pixabay.com/api/?key=47207418-8c61497e025cd9d1c57cb5533&orientation=horizontal&q=$search";
+    Uri uri=Uri.parse(api);
+    Response response=await http.get(uri);
+    if(response.statusCode==200)
+    {
+      String data=response.body;
+      Map json=jsonDecode(data);
+      return json;
+    }
+    return {};
+  }
 }
