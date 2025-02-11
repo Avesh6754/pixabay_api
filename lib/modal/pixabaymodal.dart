@@ -1,5 +1,5 @@
 class Pixabay {
-  double? total, totalHits;
+  var total, totalHits;
   List<Hits> hits;
   Pixabay({required this.total,required this.hits,required this.totalHits});
 
@@ -11,7 +11,7 @@ class Pixabay {
 }
 
 class Hits {
-  int? id,
+  var id,
       previeWidth,
       previewHeight,
       webformatWidth,

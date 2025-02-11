@@ -29,7 +29,7 @@ Expanded listbox(double Mheight) {
                                   backgroundImage: NetworkImage(provider
                                       .pixabay!.hits[index].userImageURL!),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Text(
@@ -105,14 +105,10 @@ Expanded listbox(double Mheight) {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        Text(
-                                          'Tags: ${provider.pixabay!.hits[index].tags!}',
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
                                         const SizedBox(
                                           width: 5,
                                         ),
+
                                         Text(
                                           'View all ${provider.pixabay!.hits[index].comments!} comments',
                                           style: TextStyle(
@@ -257,11 +253,6 @@ Expanded listbox(double Mheight) {
                                         Text(
                                           '${provider.searchpixabay!.hits[index].downloads!} Downloads',
                                           style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          'Tags: ${provider.searchpixabay!.hits[index].tags!}',
-                                          style: const TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
                                         const SizedBox(

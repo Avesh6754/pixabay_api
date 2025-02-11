@@ -1,5 +1,6 @@
 
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:http/http.dart 'as http;
 import 'package:http/http.dart';
@@ -15,6 +16,7 @@ class Api_Helper
     if(response.statusCode==200)
       {
         String data=response.body;
+        log("===============================JSON Calling Successfully===================================");
         Map json=jsonDecode(data);
         return json;
       }
@@ -27,6 +29,7 @@ class Api_Helper
     Response response=await http.get(uri);
     if(response.statusCode==200)
     {
+      log("===============================JSON Calling Successfully===================================");
       String data=response.body;
       Map json=jsonDecode(data);
       return json;

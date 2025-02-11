@@ -32,6 +32,7 @@ class Homepage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
+
               controller: txtsearch,
               decoration: InputDecoration(
                   hintText: 'Search',
@@ -45,6 +46,7 @@ class Homepage extends StatelessWidget {
                         onPressed: () {
                           Provider.of<HomeProvider>(context, listen: false)
                               .fetchsearchPhoto(txtsearch.text);
+                          txtsearch.clear();
                         },
                         icon: Icon(Icons.search)),
                   )),
